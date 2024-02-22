@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+
 <body class="fondo">
   <!-- hola, ten cuidado con Nadine -->
   <!-- Ayuda, dos toxicas me han estado echando la culpa -->
@@ -39,16 +40,41 @@
     </div>
   </nav>
   <h1 class="mx-2">Autenticación con Firebase</h1>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">FireApp</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link logged-out" href="#" data-bs-toggle="modal" data-bs-target="#signin-modal">Signin</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link logged-out" href="#" data-bs-toggle="modal" data-bs-target="#signup-modal">Signup</a>
+              </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link logged-in" id="logout" href="#">Logout</a>
+            </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  <h1 class="mx-2 text-center text-danger-emphasis">Autenticación con Firebase</h1>
   
   <main class="row w-75 mx-auto" id="task-main-container">
     <div class="col-md-6" id="task-form-container">
       <div id="create-tasks">
         <form id="create-form">
           <label for="task-title">Title:</label>
-          <input type="text" id="task-title" />
+          <input type="text" id="task-title" class="btn btn-outline-info"/>
           <label for="task-content">Content:</label>
-          <textarea id="task-content" cols="30" rows="5"></textarea>
-          <button type="submit" id="btn-task-save">Create Task</button>
+          <textarea id="task-content" cols="30" rows="5" class="btn btn-outline-warning"></textarea>
+          <button type="submit" id="btn-task-save" class="btn btn-outline-danger"  >Create Task</button>
         </form>
       </div>
     </div>
@@ -60,20 +86,20 @@
   <!-- Signin modal -->
   <div class="modal fade" id="signin-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
+      <div class="modal-content bg-dark">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Signin</h1>
+          <h1 class="modal-title text-info fs-5" id="exampleModalLabel">Signin</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <form id="signin-form">
-            <label for="email-signin" class="mb-1">Email</label>
-            <input id="email-signin" type="email" class="form-control mb-3" placeholder="Email" required>
-            <label for="password-signin" for="password-signin" class="mb-1">Password</label>
-            <input id="password-signin" type="password" class="form-control mb-3" placeholder="******" required>
-            <button type="submit" class="btn btn-primary form-control mb-2">Login</button>
+            <label for="staticEmail" class="col-sm-2 col-form-label text-info">Email</label>
+                <input type="email" id="login-email" class="form-control mb-3" placeholder="Email" required>
+                <label for="password" class="text-info" >Password:</label>
+                <input type="password" id="login-password" class="form-control mb-3" placeholder="*******" required>
+                <button type="submit" class="btn btn-outline-success w-100 mb-4">Login</button>
             <hr />
-            <button id="google-login" class="btn btn-info">Google</button>
+            <button id="google-login" class="btn btn-outline-info">Google</button>
           </form>
         </div>
       </div>
@@ -82,18 +108,18 @@
   <!-- Signup modal -->
   <div class="modal fade" id="signup-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
+      <div class="modal-content bg-dark">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Signup</h1>
+          <h1 class="modal-title fs-5 text-info" id="exampleModalLabel">Signup</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <form id="signup-form">
-            <label for="email-signup" class="mb-1">Email</label>
-            <input id="email-signup" type="email" class="form-control mb-3" placeholder="Email" required>
-            <label for="password-signup" class="mb-1">Password</label>
-            <input id="password-signup" type="password" class="form-control mb-3" placeholder="******" required>
-            <button type="submit" class="btn btn-primary">Register</button>
+            <label for="email" class="text-info" >Email:</label>
+            <input type="email" id="signup-email" class="form-control mb-3" placeholder="Email" required>
+            <label for="password" class="text-info" >Password:</label>
+            <input type="password" id="signup-password" class="form-control mb-3" placeholder="*******" required>
+            <button type="submit" class="btn btn-outline-success">Register</button>
           </form>
         </div>
       </div>
@@ -104,4 +130,3 @@
   <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>
-<!-- a -->
