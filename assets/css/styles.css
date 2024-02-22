@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn-delete:hover {
+    transition: transform 0.3s ease;
+    transform: translateY(-5px);
+
+}
+
+.btn-edit:hover {
+    transition: transform 0.3s ease;
+    transform: translateY(-5px);
+
+}
+
+.user-name:hover {
+    background-color: #0dcaf0;
+    transition: transform 0.3s ease;
+    transform: translateY(-5px);
+}

@@ -18,17 +18,17 @@ export default function setupTasks (user) {
             const data = doc.data();
 
             html += `
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h6> ${data.userName}</h6>
+                <div class="card mb-3 border-info">
+                    <div class="card-body bg-">
+                        <h6 class= user-name> ${data.userName}</h6>
                         <h4 class="card-title">${data.title}</h4>
                         <p class="card-text">${data.description}</p>
-                        <hr>
+                        <hr class= "bg-info">
                         <p>${data.date}</p>
                         <p> ${data.time}</p>
                         <div class="row">
-                            <button class='btn btn-danger btn-delete-custom mx-auto col-5' data-id='${doc.id}'>Delete</button>
-                            <button class='btn btn-info btn-edit-custom mx-auto col-5' data-id='${doc.id}'>Edit</button>
+                            <button class='btn btn-delete btn-dark btn-delete-custom mx-auto col-5' data-id='${doc.id}'>Delete</button>
+                            <button class='btn btn-edit btn-info btn-edit-custom mx-auto col-5' data-id='${doc.id}'>Edit</button>
                         </div>
                     </div>
                 </div>
