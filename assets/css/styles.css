@@ -21,3 +21,9 @@
     transition: transform 0.3s ease;
     transform: translateY(-5px);
 }
+
+
+
+.contenido {
+    margin-bottom: 30px;
+}

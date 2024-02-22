@@ -20,7 +20,7 @@ export default function setupTasks (user) {
             html += `
                 <div class="card mb-3 border-info">
                     <div class="card-body bg-">
-                        <h6 class= user-name> ${data.userName}</h6>
+                        <h6 class="user-name"> ${data.userName}</h6>
                         <h4 class="card-title">${data.title}</h4>
                         <p class="card-text">${data.description}</p>
                         <hr class= "bg-info">
